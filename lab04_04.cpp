@@ -40,11 +40,32 @@ void chess(int n, int m)
         {
             for (int i = 0; i < n; i++)
             {
-                for (int k = 0; k < m; k++)
-                {
-                    std::cout << "*";
+                if (w % 2 == 0) {
+                    for (int k = 0; k < m; k++)
+                    {
+                        std::cout << "*";
+                    }
+                    std::cout << " ";
+                    i++;
+                    for (int k = 0; (i < n) && (k < m); k++)
+                    {
+                        std::cout << "&";
+                    }
+                    std::cout << " ";
                 }
-                std::cout << " ";
+                else {
+                    for (int k = 0; k < m; k++)
+                    {
+                        std::cout << "&";
+                    }
+                    std::cout << " ";
+                    i++;
+                    for (int k = 0; (i < n) && (k < m); k++)
+                    {
+                        std::cout << "*";
+                    }
+                    std::cout << " ";
+                }
             }
             std::cout << "\n";
         }
